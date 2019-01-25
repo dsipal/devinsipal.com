@@ -1,0 +1,12 @@
+@import "../layout";
+@import "../components/topNav";
+@import "../components/sidebar";
+@import "../components/post";
+
+.post-name-date {
+  max-width: none;
+}
+
+.sidebar {
+  margin-top: 15vh;
+}

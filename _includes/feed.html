@@ -1,0 +1,43 @@
+<div class="row">
+
+    <div class="col-lg-12 posts">
+
+        {%- for post in site.posts -%}
+        <div class="row post shadow">
+
+            <div class="col-lg-4">
+                {% if post.featured-img %}
+                <a href="{{ post.url | relative_url }}">
+                    <img class="post-img" src="{{post.featured-img}}">
+                </a>
+                {% endif %}
+            </div>
+
+
+            <div class="col-lg-8 post-info">
+                <div class="row post-name-date">
+                    <h2 class="col-lg-9 post-name hover"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                    <div class="col-sm-3 post-date">
+                        <date>{{ post.date | date_to_long_string}}</date>
+                    </div>
+
+
+                </div>
+
+
+
+                <p class="row post-excerpt">{{post.excerpt | strip_html}}</p>
+
+            </div>
+
+
+
+
+
+        </div>
+        {%- endfor -%}
+
+
+    </div>
+
+</div>

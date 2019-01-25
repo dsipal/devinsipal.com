@@ -1,0 +1,16 @@
+.animation {
+  height: 80vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .animation {
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 991px){
+  .animation{
+    display: none;
+  }
+}

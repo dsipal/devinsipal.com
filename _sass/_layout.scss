@@ -1,0 +1,24 @@
+@import "base";
+
+.main-content {
+  padding-top: 15vh;
+  padding-left: 7vh;
+  padding-right: 7vh;
+  min-height: 100%;
+}
+
+.nav-button {
+  display: inline-block;
+  color: #55d727;
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.hover > a:hover {
+  background-color: #000000;
+  color: #fff;
+
+}
+
+

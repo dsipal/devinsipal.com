@@ -1,0 +1,32 @@
+<header class="row">
+    <div class= "row navigation shadow">
+
+        <nav class="row">
+            <h2 class="col-sm-3 nav-button hover" id="home"><a href="/">home</a></h2>
+
+            {% for node in site.category %}
+            {% if page.title == node.title %}
+            <h2 class="col-sm-3 nav-button active"><a href="{{node.url}}">{{node.title}}</a></h2>
+            {% else %}
+            <h2 class="col-sm-3 nav-button  hover"><a href="{{node.url}}">{{node.title}}</a></h2>
+            {% endif %}
+            {% endfor %}
+
+
+
+            <h2 class="col-sm-6 nav-button social-link-top">
+                <a href="https://linkedin.com/in/{{site.linkedin_username}}">
+                    linkedin
+                </a>
+            </h2>
+
+
+            <h2 class="col-sm-6 nav-button social-link-top">
+                <a href="https://github.com/{{site.github_username}}">
+                    github
+                </a>
+            </h2>
+
+        </nav>
+    </div>
+</header>
