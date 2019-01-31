@@ -13,8 +13,8 @@
 
     {{ content }}
 
-    <div class="col-sm-2 sidebar">
-        <div class="row">
+    <div class="col-sm-2">
+        <div class="row sidebar">
                 <h2 class="sidebar-header">social</h2>
 
                 {% if site.linkedin_username %}
@@ -35,7 +35,7 @@
                 {% endif %}
         </div>
 
-        <div class="row">
+        <div class="row sidebar">
             <h2 class="sidebar-header">recent</h2>
 
             {% for post in site.posts limit:3 %}

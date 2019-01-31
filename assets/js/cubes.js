@@ -70,7 +70,6 @@ var render = function () {
 
         if(changed[i] && container[i].material.opacity >= 0.01){
             changed[i] = false;
-            console.log('can see again');
         }
     }
     renderer.render(scene, camera);

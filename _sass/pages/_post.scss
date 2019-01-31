@@ -1,12 +1,11 @@
 @import "../layout";
 @import "../components/topNav";
-@import "../components/sidebar";
+@import "../components/single_sidebar";
 @import "../components/post";
 
 .post-name-date {
   max-width: none;
 }
-
-.sidebar {
-  margin-top: 15vh;
+video{
+  width: 100%;
 }
