@@ -3,10 +3,30 @@ rvm:
   - 2.4
 env:
   global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+    - secure: <secure $DEPLOY_USER>=
+    - secure: <secure $DEPLOY_HOST>=
+    - secure: <secure $DEPLOY_DIRECTORY>=
 branches:
   only:
     - master
 script:
   - bundle exec jekyll build
   - bundle exec rake test
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_<stuff>_key -iv $encrypted_<stuff>_iv
+    -in ./deploy_rsa.enc -out /tmp/deploy_rsa -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 /tmp/deploy_rsa
+  - ssh-add /tmp/deploy_rsa
+  - echo -e
+    "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --quiet --delete-after _site/*
+    $admin@$devinsipal.com:$/home/admin/web/devinsipal.com/public_html
+          rsync -r --quiet --delete-after _site/*
+    $admin@$devinsipal.com:$/home/admin/web/devinsipal.com/public_shtml
+  on:
+    branch: master
