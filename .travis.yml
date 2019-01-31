@@ -1,30 +1,28 @@
 language: ruby
 rvm:
-  - 2.4
+- 2.4
 env:
   global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-    - secure: <secure $DEPLOY_USER>=admin
-    - secure: <secure $DEPLOY_HOST>=devinsipal.com
-    - secure: <secure $DEPLOY_DIRECTORY>=/home/admin/devinsipal.com/public_html
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: uwZivp7itRUH9vLgbZeWd5fdggpe6PyjQ9+/EuDZqgmZKx7/fhJ9PMPhrsSxHybuCPiXo24Rvg20JX1aN0WJypqeuHjAxrZcFfDpEsQC0MYINZjbnohBUJg6zbFwny4zz5LQ4b2I5l1c+9E3qJsbKlcw9gzPgFVUCyj90P6W3vHNGXUijlrtTnqernVadtzkCfVrdVTruGrjY3mszVu/HCVa4FNm+PweLI9/6o1mQsPd2zlI9dIX60LQ26HnrDfZO67MQREWYwvgeSdpCT2qK5YIf5sqLDAlPQ/mmz0BZzyjkslYzFjO9v6OmXjbsTi553T2nm8kw/gtdKbwIr+69+T1Te+Fe1TUQ40t2WK4dQ94Pf8/yPm36+M0/LokVWHPT57HbjREORLEb6KXIsy7jDyZPMDxbFkB9oEUMwvug+yh/ZrA1QJLM9LS3A8n4Cs433cLjT13lphZI0a5zEcH6BM2et2nIUY5QpJfFHC7BdtaBsHSVFgfHYQVjwjBxsINcSt3pzMwxaXozE7UlYWYlAQS6QmLBxrYH3mJE99r2KoFBv2mbg6dbEYwbf/7R24gcllL69q1EsvcKlvWXLgIVCl+esXBb0iSMkcJGpfP5My7bE5oRRw2TG28WWiK6moptYWUe2qh/HO8uRx35+/3+UGdZAasl4lN3fpAFsFFzVA=
+  - secure: mZB8QuyCvC2tKF2HnbB1uqFli/0f57K0xMiRTSVtw8+F7YImGCG0j1nG4rz/p/qBry2EaHKdYY6G1u0HAOA7nYIhsKvDCELMnFwqmzO0qcfVcNt1qOXOKU/kgf9qx6dyw4kEJQWZ4NpEtWNc9Boplj9XeHGHPvHcR7etW560nU157j94uks79rgC7U/W4xw+VAG70r+eHpa9wHq5Elz6/SgcJ9FKYwpXfPat+/sW1SktG5/nApSdOVL36gO7J6oOGIzBRiE4FkvCl+bOFqdeGXYfOkq2IKPpZCjhf2ArnQYLGGsDhE6b6+MQhybF8QDomgL+NFD/vSFr8fHHfB7/OilUyC3GR166FK3DfXNgZDTe2/EkQrHUY+NqxbE5DhRWsyGG8jyVX113Ok/fptYYwQ2sP9jHX/sg0xUQzob4SeZaE+kGyZn1NjGuDy4yoJ+2eE9SwhOpXsvfPWYpeUts3InHOVzjfSwz/2JIBMKb69QHp3Yw8lXsnXnKNbRauZQ2qGgiM6N9wApL5QUVHjbslL8ddeP+26EiXtc9U/QbjQG4IN2qag0GwRqUdyJ4PrPcZAfCgI2/lesOxR2MdsPzFrTFyWZQqsRHt9lqh7kov8xNPZqb47Sz4OsyFZASCU9WRf/QOfonDYF7RN7xcHIN9tdoEVZ9hLhReQ1hur8Szes=
+  - secure: DHNL267kpqBp84prkkrvcijD15Vc24AjZpW+6rZ4lFfddaTqk/s/d/ON+KQ6sD3BmRNsl3lglW3Jmxbl1aQvsBzVGSBC27hywRblYb1Ddm46JAIrnKkUA4nFK+vGWyuj0EZSYygk2nRjt7KS0Vh7acarG6FGtiHLRlttl8LKUWZFDf4vyO89+lv+x/7bxrBao4gk1lmL455O9Ppe9lXtfVNgia0ii/DydngltXME8P3rEG/67JbO7H9tgonNNnEy3TNaa4HImimNL6alE37TSkhXO8PwXui3SH+0Vpeg9xUtkypYR7vmUri8dFbrXXS2N2wIWAEh7tJ4VHv68LHvrt1FP7MSfKdPj8kn31cSOUqvbU4R8WfPAXJwRELw/Ufz08KV/bGXhH3JK4r0B7m4g9PvubJd744CjIH4NrGgElRRxvici5T1xxENOpP2lbeMkbmTLtwjwAuyksWgMP6AUMgbQOJ0AiGVXhWyyHplAagFqdQY1hOWAHG30xcDmvNCM+mnUietbkw4SLe1DAbvfT96KghKbn4w25dBUro+7DhKhB3P7RpnTSB5gMjd02tNY/JPmgf6sprES2QIsYinYZlzmpvrFtaYtQ+DvV3q2kA3QIQZ0xKRskr75bTy7+IdgUtCG3m1qSmtOSHQjE/TgH3X6AWN4ofGemgDzpmaR8A=
 branches:
   only:
-    - master
+  - master
 script:
-  - bundle exec jekyll build
-  - bundle exec rake test
+- bundle exec jekyll build
+- bundle exec rake test
 before_deploy:
-  - openssl aes-256-cbc -K $encrypted_<stuff>_key -iv $encrypted_<stuff>_iv
-    -in ./deploy_rsa.enc -out /tmp/deploy_rsa -d
-  - eval "$(ssh-agent -s)"
-  - chmod 600 /tmp/deploy_rsa
-  - ssh-add /tmp/deploy_rsa
-  - echo -e
-    "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- openssl aes-256-cbc -K $encrypted_._key -iv $encrypted_._iv -in ./deploy_rsa.enc
+  -out /tmp/deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/deploy_rsa
+- ssh-add /tmp/deploy_rsa
+- echo -e "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --quiet --delete-after _site/*
-    $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
+  script: rsync -r --quiet --delete-after _site/* $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
   on:
     branch: master

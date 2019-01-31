@@ -12,6 +12,8 @@ const camera = new THREE.PerspectiveCamera(60, canvas.clientWidth / canvas.clien
 camera.position.z = 2;
 
 
+
+
 renderer.setClearColor("#fff");
 
 
@@ -35,20 +37,25 @@ function pastelColor(){
 }
 
 
-function genCube(){
-    container.push(new THREE.Mesh(new THREE.BoxGeometry(1,1,1), new THREE.MeshBasicMaterial({ color: pastelColor(), transparent: true, opacity: Math.random() * (0.95 - 0.6) + 0.6 })));
-    container[container.length-1].rotation.x = Math.random() * (5.0 - 0.5) + 0.5;
-    container[container.length-1].rotation.y = Math.random() * (5.0 - 0.5) + 0.5;
-    scene.add(container[container.length-1]);
+function genCube(amount){
+    for(i = 0; i < amount; i++){
+        container.push(new THREE.Mesh(
+            new THREE.BoxGeometry(1,1,1),
+            new THREE.MeshBasicMaterial({ color: pastelColor(),
+                transparent: true,
+                opacity: Math.random() * (0.95 - 0.6) + 0.6 })));
+
+        container[i].rotation.x = (60 * i);
+        container[i].rotation.y = (60 * i);
+        scene.add(container[i]);
+        changed[i] = false;
+    }
+
 }
 
 function init(){
     window.addEventListener( 'resize', onWindowResize, false );
-
-    for(var i = 0; i < cubes; i++){
-        genCube();
-        changed[i] = false;
-    }
+    genCube(cubes);
 
 }
 
