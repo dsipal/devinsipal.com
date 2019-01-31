@@ -20,24 +20,12 @@
                     <div class="col-sm-3 post-date">
                         <date>{{ post.date | date_to_long_string}}</date>
                     </div>
-
-
                 </div>
-
-
-
-                <p class="row post-excerpt">{{post.excerpt | strip_html}}</p>
-
+                <p class="row post-excerpt">
+                {{post.excerpt | strip_html}}
+                </p>
             </div>
-
-
-
-
-
         </div>
         {%- endfor -%}
-
-
     </div>
-
 </div>
