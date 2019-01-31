@@ -8,7 +8,7 @@
             <div class="col-lg-4">
                 {% if post.featured-img %}
                 <a href="{{ post.url | relative_url }}">
-                    <img class="post-img" src="{{post.featured-img}}">
+                    <img class="post-img" src="{{post.featured-img}}" alt="{{post.title}}">
                 </a>
                 {% endif %}
             </div>
