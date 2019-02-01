@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Subtractive Color Generator"
+title: "HTML Pixel Art"
 categories: code
 featured-img: /assets/img/featured/subtractive.png
 ---
