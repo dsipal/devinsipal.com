@@ -4,26 +4,26 @@ type: 'page'
 ---
 <div class="col-lg-10 main-content">
 
-  {% for post in site.categories[page.category] %}
-  <div class="col-lg-4">
-    <div class="post shadow">
-              {% if post.featured-img %}
-              <div class="row">
-              <a href="{{ post.url | relative_url }}">
-                                <img class="post-img" src="{{post.featured-img}}" alt="{{post.title}}">
-                            </a>
-              </div>
+	{% for post in site.categories[page.category] %}
+	<div class="col-lg-4">
+		<div class="post shadow">
+			{% if post.featured-img %}
+			<div class="row">
+				<a href="{{ post.url | relative_url }}">
+					<img class="post-img" src="{{post.featured-img}}" alt="{{post.title}}">
+				</a>
+			</div>
 
-                  {% endif %}
-                  <div class="row post-name-date">
-                      <h2 class="col-lg-9 post-name hover"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-                      <div class="col-sm-3 post-date">
-                          <date>{{ post.date | date_to_long_string}}</date>
-                      </div>
-                  </div>
-    </div>
+			{% endif %}
+			<div class="row post-name-date">
+				<h2 class="col-lg-9 post-name hover"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+				<div class="col-sm-3 post-date">
+					<date>{{ post.date | date_to_long_string}}</date>
+				</div>
+			</div>
+		</div>
 
-  </div>
-  {% endfor %}
+	</div>
+	{% endfor %}
 
 </div>

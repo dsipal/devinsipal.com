@@ -5,53 +5,53 @@
 
 <body>
 
-{% if page.layout != 'home' %}
+	{% if page.layout != 'home' %}
 
-{%- include header.html -%}
+	{%- include header.html -%}
 
-{% endif %}
+	{% endif %}
 
-<div class="row">
-    <div class="col-sm-2 sidebar">
-        <h2 class="sidebar-header">recent</h2>
+	<div class="row">
+		<div class="col-sm-2 sidebar">
+			<h2 class="sidebar-header">recent</h2>
 
-        {% for post in site.posts limit:3 %}
-        <h3 class="hover">
-            <a href="{{post.url}}">
-                {{post.title}}
-            </a>
-        </h3>
-        {% endfor %}
-    </div>
+			{% for post in site.posts limit:3 %}
+			<h3 class="hover">
+				<a href="{{post.url}}">
+					{{post.title}}
+				</a>
+			</h3>
+			{% endfor %}
+		</div>
 
-    {{ content }}
+		{{ content }}
 
-    <div class="col-sm-2 sidebar">
-        <h2 class="sidebar-header">social</h2>
+		<div class="col-sm-2 sidebar">
+			<h2 class="sidebar-header">social</h2>
 
-        {% if site.linkedin_username %}
-        <h3 class="hover">
-            <a href="https://linkedin.com/in/{{site.linkedin_username}}">
-                linkedin
-            </a>
-        </h3>
-        {% endif %}
+			{% if site.linkedin_username %}
+			<h3 class="hover">
+				<a href="https://linkedin.com/in/{{site.linkedin_username}}">
+					linkedin
+				</a>
+			</h3>
+			{% endif %}
 
 
-        {% if site.github_username %}
-        <h3 class="hover">
-            <a href="https://github.com/{{site.github_username}}">
-                github
-            </a>
-        </h3>
-        {% endif %}
-    </div>
+			{% if site.github_username %}
+			<h3 class="hover">
+				<a href="https://github.com/{{site.github_username}}">
+					github
+				</a>
+			</h3>
+			{% endif %}
+		</div>
 
-</div>
+	</div>
 
-{% if page.layout == 'home' %}
-{%- include feed.html -%}
-{% endif %}
+	{% if page.layout == 'home' %}
+	{%- include feed.html -%}
+	{% endif %}
 
 </body>
 
