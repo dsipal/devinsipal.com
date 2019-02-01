@@ -13,7 +13,7 @@
               <div class="row post-name-date">
                   <h2 class="col-lg-9 post-name hover"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
                   <div class="col-sm-3 post-date">
-                      <date>{{ post.date | date_to_long_string}}</date>
+                      <date>{{ post.date | date: "%m/%d/%Y"}}</date>
                   </div>
               </div>
           </div>

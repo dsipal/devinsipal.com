@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-graphics
 title: "Pixelated Dreams"
 categories: graphics
 featured-img: /assets/img/graphics/pixelated.png
