@@ -36,6 +36,8 @@ defaults:
       layout: category
 
 permalink: none
+pagination: 6
+pagination_path: ""
 
 
 # Exclude from processing.
