@@ -1,14 +1,16 @@
 .post {
   margin: 20px 10px 20px 10px;
+  max-height: 80vh;
+  box-sizing: border-box;
 }
 .post-info {
   height: 100%;
 }
 .post-img {
   height: auto;
-  object-fit: contain;
-  max-height: 80vh;
-  margin-bottom: 15px;
+  width: 100%;
+  margin-bottom: 7px;
+  height: 75vh;
 }
 .post-name {
   padding: 0;
@@ -24,11 +26,13 @@
 }
 
 .post-name-date{
+	padding-top: 7px;
   vertical-align: bottom;
   line-height: 28px;
   background-color: #000;
   max-width: 95%;
   color: #fff;
+  height: 5vh;
 }
 .post-content {
   text-align: left;
