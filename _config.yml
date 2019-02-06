@@ -17,6 +17,7 @@ plugins:
   - jekyll-feed
   - bootstrap-sass
   - jekyll-bootstrap-sass
+  - jekyll-paginate-v2
 
 sass:
   style: compact
@@ -36,8 +37,15 @@ defaults:
       layout: category
 
 permalink: none
-pagination: 6
-pagination_path: ""
+
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/page/:num/'
+  title_suffix: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 
 
 # Exclude from processing.
