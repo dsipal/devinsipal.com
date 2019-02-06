@@ -1,7 +1,7 @@
 ---
 layout: post-graphics
 title: "Pixelated Dreams"
-categories: graphics
+category: graphics
 featured-img: /assets/img/graphics/pixelated.png
 ---
 

@@ -1,6 +1,8 @@
-<div class="row posts force-height">
-	{%- for post in site.posts -%}
-	<div class="col-lg-4">
+{% assign currentPage = 1 %}
+<div class="row posts force-height" data-page="{{ currentPage }}" data-totalPages="{{ paginator.total_pages }}">
+
+	{% for post in paginator.posts %}
+	<div class="col-lg-4 post-container" >
 		<div class="post shadow">
 			{% if post.featured-img %}
 			<div class="row">
@@ -17,7 +19,9 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
-	{%- endfor -%}
+	{% endfor %}
+
+
 </div>
+<script src="/assets/js/pagination.js"></script>
