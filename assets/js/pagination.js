@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$(window).scroll(function() {
-	   if( ($(window).scrollTop() + $(window).height() == $(document).height()) &&
+	   if( (($(".post").last().offset().top + $(".post").last().height()) >= $(window).height()) &&
 	   		!($('.posts').attr("data-totalpages") == $('.posts').attr("data-page") )
 		){
 		   loadMorePosts();
