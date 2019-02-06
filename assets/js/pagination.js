@@ -1,11 +1,14 @@
+$(document).ready(function(){
+	$(window).scroll(function() {
+	   if( ($(window).scrollTop() + $(window).height() == $(document).height()) &&
+	   		!($('.posts').attr("data-totalpages") == $('.posts').attr("data-page") )
+		){
+		   loadMorePosts();
 
-$(window).scroll(function() {
-   if( ($(window).scrollTop() + $(window).height() == $(document).height()) &&
-   		!($('.posts').attr("data-totalpages") == $('.posts').attr("data-page") )
-	){
-	   loadMorePosts();
-   }
+	   }
+	})
 });
+
 
 function loadMorePosts() {
   var _this = this;
@@ -15,8 +18,8 @@ function loadMorePosts() {
 
   $.get("/page/" + nextPage, function (data) {
     var htmlData = $.parseHTML(data);
-    var $posts = $(htmlData).find(".post-container");
-    $container.attr("data-page", nextPage).append($posts);
+    var $posts = $(htmlData).find(".post-container").hide();
+    $container.attr("data-page", nextPage).append($posts.fadeIn(1000));
 
   });
 }
