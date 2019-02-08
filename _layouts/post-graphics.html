@@ -17,11 +17,12 @@ type: 'post'
 			</div>
 
 
+			{% if content.size > 1 %}
+			<div class="post-content">
+				{{ content }}
+			</div>
+			{% endif %}
 
-
-		<div class="post-content">
-			{{ content }}
-		</div>
 	</div>
 
 </div>

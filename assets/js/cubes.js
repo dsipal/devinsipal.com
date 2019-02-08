@@ -5,7 +5,7 @@ var cubes = 6;
 
 //threejs variables
 const scene = new THREE.Scene();
-const renderer = new THREE.WebGLRenderer({antialias:true, canvas: document.querySelector("div > canvas.animation")});
+const renderer = new THREE.WebGLRenderer({antialias:true, alpha: true, canvas: document.querySelector("div > canvas.animation")});
 const canvas = renderer.domElement;
 renderer.setSize( canvas.clientWidth , canvas.clientHeight, false);
 const camera = new THREE.PerspectiveCamera(60, canvas.clientWidth / canvas.clientHeight, 0.1,1000);
@@ -14,7 +14,7 @@ camera.position.z = 2;
 
 
 
-renderer.setClearColor("#fff");
+renderer.setClearColor( 0x000000, 0 );
 
 
 function onWindowResize(){

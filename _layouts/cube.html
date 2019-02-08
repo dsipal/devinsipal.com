@@ -5,14 +5,11 @@
 
 <body>
 
-	{% if page.layout != 'home' %}
+	{{ content }}
 
-	{%- include header.html -%}
-
-	{% endif %}
 
 	<div class="row container-top">
-		<div class="col-sm-1 sidebar">
+		<div class="sidebar sidebar-home" id="recent">
 			<h2 class="sidebar-header">recent</h2>
 
 			{% for post in site.posts limit:3 %}
@@ -24,9 +21,7 @@
 			{% endfor %}
 		</div>
 
-		{{ content }}
-
-		<div class="col-sm-1 sidebar">
+		<div class="sidebar sidebar-home" id="social">
 			<h2 class="sidebar-header">social</h2>
 
 			{% if site.linkedin_username %}
@@ -47,12 +42,12 @@
 			{% endif %}
 		</div>
 
+
+
+
+
 	</div>
-
-	{% if page.layout == 'home' %}
 	{%- include feed.html -%}
-	{% endif %}
-
 </body>
 
 </html>
