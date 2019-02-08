@@ -1,10 +1,10 @@
 $(document).ready(function(){
 	$(window).scroll(function() {
-	   if( ($(window).scrollTop() + $(window).height() == $(document).height()) &&
+	   if(
+		   ( $(document).height() - $(window).height() - $(window).scrollTop()) < 70 &&
 	   		!($('.posts').attr("data-totalpages") == $('.posts').attr("data-page") )
 		){
-		   loadMorePosts();
-
+		   loadMorePosts()
 	   }
 	})
 });
@@ -16,10 +16,10 @@ function loadMorePosts() {
   var nextPage = parseInt($container.attr("data-page")) + 1;
   var totalPages = parseInt($container.attr("data-totalpages"));
 
+  $container.attr("data-page", nextPage);
   $.get("/page/" + nextPage, function (data) {
     var htmlData = $.parseHTML(data);
     var $posts = $(htmlData).find(".post-container").hide();
-    $container.attr("data-page", nextPage).append($posts.fadeIn(1000));
-
+    $container.append($posts.fadeIn(1000));
   });
 }

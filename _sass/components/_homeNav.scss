@@ -38,9 +38,13 @@
 }
 
 @media screen and (max-width: 767px){
+	.name{
+		width: 100%;
+		max-width: 214px;
+	}
 
   .bottom-nav {
-    width: 214px;
+    max-width: 214px;
     margin: 0 auto;
   }
   .navigation {

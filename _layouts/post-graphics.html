@@ -4,10 +4,11 @@ type: 'post'
 ---
 
 <div class="col-lg-10 main-content">
-	<div class="row post">
-		<div class="row post-image">
+	<div class="post shadow">
 
-			<img class="post-img shadow" src="{{page.featured-img}}" alt="{{page.title}}">
+
+			<img class="row post-img" src="{{page.featured-img}}" alt="{{page.title}}">
+
 			<div class="row post-details">
 				<div class="row post-name-date">
 					<h2 class="col-lg-9 post-name">{{page.title}}</h2>
@@ -16,13 +17,12 @@ type: 'post'
 			</div>
 
 
-
-
-
+			{% if content.size > 1 %}
 			<div class="post-content">
 				{{ content }}
 			</div>
-		</div>
+			{% endif %}
+
 	</div>
 
 </div>

@@ -3,3 +3,11 @@
 @import "../components/animation";
 @import "../components/feed";
 @import "../components/homeNav";
+
+.container-top{
+	background-image: url("/assets/img/landingbg.svg");
+	background-repeat: no-repeat;
+	background-size: auto auto;
+	overflow: hide;
+	background-position: center; 
+}

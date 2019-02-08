@@ -2,6 +2,27 @@
   justify-content: center;
   font-size: 100%;
   margin-top: 40vh;
+
+}
+
+.sidebar-home{
+	background-color: #F7F7F7F7;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 10px;
+    position: absolute;
+	width: 200px;
+	height: 200px;
+}
+
+#recent{
+	top: 10vh;
+	right: 5vh;
+}
+
+#social{
+	top: 40vh;
+	right: 5vh;
 }
 
 .recent-bar > h2 {
