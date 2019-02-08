@@ -7,23 +7,23 @@
 
 .sidebar-home{
 	background-color: #F7F7F7F7;
-    border: 1px solid black;
+    border: 2px solid black;
     box-sizing: border-box;
-    margin: 10px;
-    position: absolute;
-	width: 200px;
+    margin-top: 20px;
+	display: block;
+	padding: 5px;
+	width: 170px;
 	height: 200px;
+	border-radius: 7px;
 }
 
-#recent{
-	top: 10vh;
-	right: 5vh;
+.sidebar-container{
+	position: absolute;
+	right: 35px;
+	width: 170px;
 }
 
-#social{
-	top: 40vh;
-	right: 5vh;
-}
+
 
 .recent-bar > h2 {
   font-size: 24px;
@@ -36,6 +36,7 @@
 
 .sidebar-header {
   text-decoration: underline;
+  margin-top: 5px;
 }
 
 @media screen and (max-width: 1199px) {
