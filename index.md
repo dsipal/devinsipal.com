@@ -1,8 +1,6 @@
 ---
-layout: cube
+layout: home
 pagination:
   enabled: true
 title: home
 ---
-
-{%- include cubeart.html -%}

@@ -1,15 +1,17 @@
 //global variables
-var container = [];
+var cubesAmt = 4;
+var cubes = [];
 var changed = [];
-var cubes = 6;
+
 
 //threejs variables
+const container = '.animation-container';
 const scene = new THREE.Scene();
 const renderer = new THREE.WebGLRenderer({antialias:true, alpha: true, canvas: document.querySelector("div > canvas.animation")});
 const canvas = renderer.domElement;
-renderer.setSize( canvas.clientWidth , canvas.clientHeight, false);
-const camera = new THREE.PerspectiveCamera(60, canvas.clientWidth / canvas.clientHeight, 0.1,1000);
-camera.position.z = 2;
+renderer.setSize( $(container).width()/2.4, $(container).width()/2.4, false);
+const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
+camera.position.z = 2.3;
 
 
 
@@ -18,13 +20,16 @@ renderer.setClearColor( 0x000000, 0 );
 
 
 function onWindowResize(){
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
+    const width = $(container).width()/2.4;
+    const height = $(container).height();
 
-    if (canvas.width !== width ||canvas.height !== height) {
-        camera.aspect = width / height;
-        renderer.setSize( width, height, false);
+    if (canvas.width !== width || canvas.height !== width) {
+        camera.aspect = 1;
+        renderer.setSize( width, width, false);
         camera.updateProjectionMatrix();
+
+		console.log($(container).width());
+		console.log(canvas.width);
 
     }
 }
@@ -39,15 +44,15 @@ function pastelColor(){
 
 function genCube(amount){
     for(i = 0; i < amount; i++){
-        container.push(new THREE.Mesh(
+        cubes.push(new THREE.Mesh(
             new THREE.BoxGeometry(1,1,1),
             new THREE.MeshBasicMaterial({ color: pastelColor(),
                 transparent: true,
                 opacity: Math.random() * (0.95 - 0.6) + 0.6 })));
 
-        container[i].rotation.x = (60 * i);
-        container[i].rotation.y = (60 * i);
-        scene.add(container[i]);
+        cubes[i].rotation.x = (60 * i);
+        cubes[i].rotation.y = (60 * i);
+        scene.add(cubes[i]);
         changed[i] = false;
     }
 
@@ -55,27 +60,28 @@ function genCube(amount){
 
 function init(){
     window.addEventListener( 'resize', onWindowResize, false );
-    genCube(cubes);
+    genCube(cubesAmt);
+	console.log($(container).width());
 
 }
 
 //main render loop
 var render = function () {
   requestAnimationFrame( render );
-    for(i = 0; i < container.length; i++){
+    for(i = 0; i < cubes.length; i++){
         if(i%2==0){
-            container[i].rotation.y += Math.random() * (0.03 - 0.01) + 0.01;
+            cubes[i].rotation.y += Math.random() * (0.03 - 0.01) + 0.01;
         }else{
-            container[i].rotation.x += Math.random() * (0.03 - 0.01) + 0.01;
+            cubes[i].rotation.x += Math.random() * (0.03 - 0.01) + 0.01;
         }
-        container[i].material.opacity = 1 + Math.sin(new Date().getTime() * .0008);
+        cubes[i].material.opacity = 1 + Math.sin(new Date().getTime() * .0008);
 
-        if(!changed[i] && container[i].material.opacity <= 0.01){
-            container[i].material.color.set(pastelColor());
+        if(!changed[i] && cubes[i].material.opacity <= 0.01){
+            cubes[i].material.color.set(pastelColor());
             changed[i] = true;
         }
 
-        if(changed[i] && container[i].material.opacity >= 0.01){
+        if(changed[i] && cubes[i].material.opacity >= 0.01){
             changed[i] = false;
         }
     }

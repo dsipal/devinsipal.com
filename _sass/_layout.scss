@@ -4,6 +4,7 @@
   padding-left: 7vh;
   padding-right: 7vh;
   min-height: 100%;
+  overflow: hidden;
 }
 
 .nav-button {
@@ -17,7 +18,17 @@
 .hover > a:hover {
   background-color: #000000;
   color: #fff;
-
 }
-
-
+.svg-background {
+	background-size: contain;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	height: 75%;
+	box-sizing: border-box;
+}
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.rounded {
+	border-radius: 7px;
+}

@@ -3,15 +3,19 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="icon" href="/assets/img/favicon.ico" type="image/ico"/>
+	<link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" type="image/ico"/>
+
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css" rel="stylesheet" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/91/three.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" rel="stylesheet">
-	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/91/three.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 	{%if page.title == 'home' %}
 	<link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.2/rellax.js"></script>
 	{% endif %}
 
 	{%if page.type == 'category' %}
@@ -20,8 +24,6 @@
 
 	{% if layout.type == 'post' %}
 	<link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
-
 	{% endif %}
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>

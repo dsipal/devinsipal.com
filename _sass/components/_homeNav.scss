@@ -13,6 +13,11 @@
 }
 
 .navigation {
+	position: absolute;
+	z-index: 3;
+	box-sizing: border-box;
+	bottom: 0px;
+	left: 0px;
   border-bottom: 3px solid black;
   margin-top: 10px;
   width: 100%;

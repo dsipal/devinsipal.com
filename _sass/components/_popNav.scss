@@ -1,0 +1,29 @@
+.popNav {
+  justify-content: center;
+  font-size: 100%;
+  overflow: hidden;
+  margin-top: 2vh;
+  background-color: white;
+}
+.popNav > ul {
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+.pnavItem {
+  text-align: center;
+}
+
+.popNav-header {
+  padding: 7px;
+  margin-top: 0;
+  background: linear-gradient(166deg, #ffe1b5 0%, #9d67ec 84%);
+  color: #fbf9f9;
+  border-bottom: 1px solid #606060;
+}
+
+@media screen and (max-width: 1199px) {
+  .popNav {
+    display: none;
+  }
+}

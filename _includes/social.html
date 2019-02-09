@@ -1,0 +1,16 @@
+<div class="social popNav shadow rounded" id="social">
+	<h2 class="popNav-header">social</h2>
+	<ul class="social-links">
+		{% for profile in site.data.social %}
+		<li class="pnavItem">
+			<h3 class="hover">
+				<a href="{{profile.url}}">
+					{{profile.title}}
+				</a>
+			</h3>
+		</li>
+		{% endfor %}
+	</ul>
+
+
+</div>
