@@ -1,28 +1,24 @@
 ---
-layout: twocol
+layout: base
 type: 'post'
 ---
 
-<div class="col-lg-10 main-content">
+<div class="row main-content">
 	<div class="post shadow">
+		<img class="row post-img" src="{{page.featured-img}}" alt="{{page.title}}">
 
-
-			<img class="row post-img" src="{{page.featured-img}}" alt="{{page.title}}">
-
-			<div class="row post-details">
-				<div class="row post-name-date">
-					<h2 class="col-lg-9 post-name">{{page.title}}</h2>
-					<time class="col-sm-3 post-date">{{page.date | date_to_long_string}}</time>
-				</div>
+		<div class="row post-details">
+			<div class="row post-name-date">
+				<h2 class="col-lg-9 post-name">{{page.title}}</h2>
+				<time class="col-sm-3 post-date">{{page.date | date_to_long_string}}</time>
 			</div>
+		</div>
 
 
-			{% if content.size > 1 %}
-			<div class="post-content">
-				{{ content }}
-			</div>
-			{% endif %}
-
+		{% if content.size > 1 %}
+		<div class="post-content">
+			{{ content }}
+		</div>
+		{% endif %}
 	</div>
-
 </div>

@@ -1,26 +1,37 @@
 .sidebar {
   justify-content: center;
   font-size: 100%;
-  margin-top: 40vh;
-
 }
 
 .sidebar-home{
 	background-color: #F7F7F7F7;
     border: 2px solid black;
     box-sizing: border-box;
-    margin-top: 20px;
-	display: block;
 	padding: 5px;
 	width: 170px;
 	height: 200px;
 	border-radius: 7px;
+	position: fixed;
+	z-index: 0;
+	top: 30px;
 }
 
 .sidebar-container{
 	position: absolute;
-	right: 35px;
-	width: 170px;
+	height: 201px;
+}
+#recent{
+	left: 23vw;
+}
+
+#social{
+	right: 23vw;
+}
+
+.sidebar > ul{
+	list-style: none;
+	margin: 0;
+	padding-inline-start: 0;
 }
 
 
@@ -40,7 +51,7 @@
 }
 
 @media screen and (max-width: 1199px) {
-  .sidebar {
+  .sidebar-container {
     display: none;
   }
 }

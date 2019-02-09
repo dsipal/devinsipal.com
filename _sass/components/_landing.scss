@@ -1,0 +1,102 @@
+.animation-container{
+	position: relative;
+	z-index: 3;
+	min-height: 256px;
+	min-width: 256px;
+	top: 70px;
+	height: 100%;
+}
+
+.animation {
+	max-width: 400px;
+	max-height: 400px;
+	position: absolute;
+	right: 30%;
+	top: 20%;
+}
+
+.parallax-wrapper {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	height: 80%;
+	width: 100%;
+}
+
+#white-cover {
+	background-image: url("/assets/img/white-cover.svg");
+	height: 80%;
+	width: 100%;
+	position: absolute;
+	min-height: 600px;
+	z-index: 1;
+	bottom: 0;
+	background-size: contain;
+}
+
+#left-art {
+	background-image: url("/assets/img/left-home-form.svg");
+	position: relative;
+	z-index: 2;
+	background-position: center;
+	height: 75vh;
+}
+
+#right-art {
+	background-image: url("/assets/img/right-home-form.svg");
+	z-index: 0;
+	position: relative;
+	background-position: center;
+}
+
+.container-top {
+	background: rgb(229,206,173);
+	background: linear-gradient(166deg, rgba(229,206,173,1) 0%, rgba(112,49,207,1) 84%);
+	overflow: hide;
+	min-height: 100vh;
+}
+
+.sidebar-container {
+	z-index: 3;
+}
+
+
+@media screen and (max-width: 1199px) {
+	.container-top{
+		position: relative;
+	}
+	.animation {
+		max-height: 256px;
+		top: 7%;
+	}
+	.container-top {
+		min-height: 45vh;
+	}
+	.sidebar{
+		display: none;
+	}
+
+	#left-art{
+		height: 40vh;
+		top: 15%;
+
+	}
+	#white-cover{
+
+	}
+	.parallax-wrapper{
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.animation {
+		display: none;
+	}
+	.svg-background{
+		display: none;
+	}
+	.container-top{
+		min-height: 150px;
+	}
+}

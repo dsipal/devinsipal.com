@@ -1,13 +1,14 @@
 @import "../layout";
-@import "../components/sidebar";
-@import "../components/animation";
-@import "../components/feed";
+@import "../components/landing";
 @import "../components/homeNav";
+@import "../components/feed";
+@import "../components/popNav";
 
-.container-top{
-	background-image: url("/assets/img/landingbg.svg");
-	background-repeat: no-repeat;
-	background-size: auto auto;
-	overflow: hide;
-	background-position: center top;
+.social{
+	height: 150px;
+	width: 100px;
+	position: fixed;
+	left: 22vw;
+	bottom: 25vw;
+	z-index: 0;
 }

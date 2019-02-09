@@ -1,14 +1,11 @@
 title: devinsipal.com
 email: devin@devinsipal.com
+
 description: >-
   Devin Sipal has a wide variety of styles they tap into. Utilizing both video and code as a medium, they bring a fresh take to both areas. Having started programming at a very young age, they have an intense passion for working with computers to create art.
+
 baseurl: ""
 url: "http://devinsipal.com"
-
-
-twitter_username: dsipal
-github_username:  dsipal
-linkedin_username: devin-sipal-721285106
 
 # Build settings
 markdown: kramdown

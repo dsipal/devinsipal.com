@@ -1,5 +1,26 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-{%- include cubeart.html -%}
+{%- include head.html -%}
+
+<body>
+	<div class="row container-top">
+
+		{%- include cube.html -%}
+
+		{%- include homeNav.html -%}
+
+		{%- include social.html -%}
+
+	</div>
+
+	<div class="feed" data-page="1" data-totalPages="{{ paginator.total_pages }}">
+		{%- include feed.html -%}
+	</div>
+	<script src="{{ '/assets/js/pagination.js' | relative_url }}"></script>
+
+	<script src="{{ '/assets/js/cubes.js' | relative_url }}"></script>
+	<script src="{{ '/assets/js/home-parallax.js' | relative_url }}"></script>
+</body>
+
+</html>
