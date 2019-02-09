@@ -4,11 +4,16 @@
 @import "../components/feed";
 @import "../components/popNav";
 
-.social{
-	height: 150px;
-	width: 100px;
-	position: fixed;
-	left: 22vw;
-	bottom: 25vw;
-	z-index: 0;
+.social-top{
+	margin-top: 4px;
+	text-align: right;
+}
+
+.social-top > a{
+	font-size: 19px;
+	font-weight: 700;
+	color: white;
+	letter-spacing: .2em;
+	margin-right: 3vw;
+
 }
