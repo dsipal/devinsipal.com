@@ -5,12 +5,20 @@
 
 <body>
 	<div class="row container-top">
+		<div class="row social-top">
+			{% for profile in site.data.social %}
+			<a href="{{profile.url}}">
+				{{profile.title}}
+			</a>
+			{% endfor %}
+		</div>
+
 
 		{%- include cube.html -%}
 
 		{%- include homeNav.html -%}
 
-		{%- include social.html -%}
+
 
 	</div>
 
