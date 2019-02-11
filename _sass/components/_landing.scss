@@ -1,18 +1,30 @@
-.animation-container{
+.svg-background {
+	background-size: contain;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	height: 85%;
+	box-sizing: border-box;
+}
+
+.animation-container {
 	position: relative;
 	z-index: 3;
 	min-height: 256px;
 	min-width: 256px;
-	top: 70px;
-	height: 100%;
+	top: 20%;
+	height: 70%;
 }
 
 .animation {
 	max-width: 400px;
 	max-height: 400px;
+	height: 20vw;
+	width: 20vw;
 	position: absolute;
-	right: 30%;
-	top: 20%;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .parallax-wrapper {
@@ -42,61 +54,93 @@
 	height: 75vh;
 }
 
+#left-small-art {
+	background-image: url("/assets/img/small-home-form.svg");
+	position: relative;
+	height: 20vh;
+	z-index: 1;
+	background-position: center;
+	background-size: contain;
+}
+
+#right-small-art {
+	background-image: url("/assets/img/smaller-home-form.svg");
+	position: relative;
+	z-index: 2;
+}
+
 #right-art {
 	background-image: url("/assets/img/right-home-form.svg");
 	z-index: 0;
 	position: relative;
 	background-position: center;
+	height: 60%;
 }
 
 .container-top {
 	background: rgb(229,206,173);
 	background: linear-gradient(166deg, rgba(229,206,173,1) 0%, rgba(112,49,207,1) 84%);
 	overflow: hide;
-	min-height: 100vh;
+	height: 100vh;
 }
 
 .sidebar-container {
 	z-index: 3;
 }
-
-
 @media screen and (max-width: 1199px) {
-	.container-top{
+	.container-top {
 		position: relative;
 	}
+
 	.animation {
 		max-height: 256px;
-		top: 7%;
 	}
+	.animation-container{
+		height: 50%;
+		top: 10%;
+	}
+
 	.container-top {
-		min-height: 45vh;
+		height: 45vh;
 	}
-	.sidebar{
+
+	.sidebar {
 		display: none;
 	}
 
-	#left-art{
+	#left-small-art {
+		background-position: center top;
+		bottom: 50%;
+		right: 3%;
+	}
+
+	#left-art {
 		height: 40vh;
 		top: 15%;
-
 	}
-	#white-cover{
-
+	#right-art{
+		height: 30vh;
 	}
-	.parallax-wrapper{
+
+	#white-cover {
+		height: 50%;
+		background-size: contain;
+	}
+
+	.parallax-wrapper {
 		height: 100%;
 	}
 }
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 	.animation {
 		display: none;
 	}
-	.svg-background{
+
+	.svg-background {
 		display: none;
 	}
-	.container-top{
-		min-height: 150px;
+
+	.container-top {
+		height: 120px;
 	}
 }

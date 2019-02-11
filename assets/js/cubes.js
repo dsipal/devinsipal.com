@@ -27,10 +27,6 @@ function onWindowResize(){
         camera.aspect = 1;
         renderer.setSize( width, width, false);
         camera.updateProjectionMatrix();
-
-		console.log($(container).width());
-		console.log(canvas.width);
-
     }
 }
 
@@ -61,8 +57,6 @@ function genCube(amount){
 function init(){
     window.addEventListener( 'resize', onWindowResize, false );
     genCube(cubesAmt);
-	console.log($(container).width());
-
 }
 
 //main render loop

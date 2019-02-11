@@ -2,11 +2,11 @@
 @import "../components/landing";
 @import "../components/homeNav";
 @import "../components/feed";
-@import "../components/popNav";
 
 .social-top{
-	margin-top: 4px;
-	text-align: right;
+	margin-top: 1vh;
+	margin-left: 4vh;
+	text-align: left;
 }
 
 .social-top > a{
@@ -16,4 +16,10 @@
 	letter-spacing: .2em;
 	margin-right: 3vw;
 
+}
+
+@media screen and (max-width: 768px) {
+	.social-top{
+		display: none;
+	}
 }

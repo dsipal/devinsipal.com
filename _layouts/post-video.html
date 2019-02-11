@@ -5,12 +5,12 @@ type: 'post'
 
 <div class="row main-content">
 	<div class="post shadow">
-		<video src="{{page.video-url}}" controls="controls"></video>
+		<video src="{{ page.video-url | relative_url }}" controls="controls"></video>
 
 		<div class="row post-details">
 			<div class="row post-name-date">
 				<h2 class="col-lg-9 post-name">{{page.title}}</h2>
-				<time class="col-sm-3 post-date">{{page.date | date_to_long_string}}</time>
+				<time class="col-sm-3 post-date">{{page.date | date: "%m/%d/%Y"}}</time>
 			</div>
 		</div>
 

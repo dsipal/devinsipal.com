@@ -1,29 +1,29 @@
 {% assign currentPage = 1 %}
+<div class="feed" data-page="1" data-totalPages="{{ paginator.total_pages}}" data-url="{{page.paginator-path}}">
+	<div class="row feed-row">
+		{% for item in paginator.posts %}
+		<div class="col-md-4 feed-col">
+			<div class="feed-item force-height shadow rounded">
+				{% if item.featured-img %}
+				<div class="row item-top">
+					<a href="{{ item.url | relative_url }}">
+						<span class="item-category c-{{item.category}}">{{item.category}}</span>
+						<img class="item-img" src="{{item.featured-img}}" alt="{{item.title}}">
+					</a>
+				</div>
+				{% endif %}
 
-
-<div class="feed-row force-height">
-
-	{% for item in paginator.posts %}
-	<div class="col-md-4 feed-col">
-
-		<div class="feed-item shadow rounded">
-			{% if item.featured-img %}
-			<div class="row">
-				<a href="{{ item.url | relative_url }}">
-					<img class="item-img" src="{{item.featured-img}}" alt="{{item.title}}">
-				</a>
-			</div>
-			{% endif %}
-
-			<div class="row item-name-date">
-				<h2 class="col-sm-9 item-name  hover">
-					<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-				</h2>
-				<div class="col-sm-3 item-date">
-					<date>{{ item.date | date: "%m/%d/%Y"}}</date>
+				<div class="row item-name-date">
+					<h2 class="col-sm-9 item-name  hover">
+						<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+					</h2>
+					<div class="col-sm-3 item-date">
+						<date>{{ item.date | date: "%m/%d/%Y"}}</date>
+					</div>
 				</div>
 			</div>
+
 		</div>
+		{% endfor %}
 	</div>
-	{% endfor %}
 </div>
