@@ -8,4 +8,6 @@ paginator-path: '/video/'
 pagination:
    enabled: true
    category: video
+   permalink: '/:num/'
+
 ---
