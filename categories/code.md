@@ -8,4 +8,6 @@ paginator-path: '/code/'
 pagination:
    enabled: true
    category: code
+   permalink: '/:num/'
+
 ---

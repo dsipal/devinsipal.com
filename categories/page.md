@@ -6,4 +6,6 @@ permalink: '/page/'
 paginator-path: '/page/'
 pagination:
    enabled: true
+   permalink: '/:num/'
+
 ---

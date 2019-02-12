@@ -8,4 +8,6 @@ paginator-path: '/graphics/'
 pagination:
    enabled: true
    category: graphics
+   paginate_path: "/:num/"
+
 ---
