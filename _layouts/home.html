@@ -7,28 +7,22 @@
 	<div class="row container-top">
 		<div class="row social-top">
 			{% for profile in site.data.social %}
-			<a href="{{profile.url}}">
-				{{profile.title}}
-			</a>
+			<a href="{{profile.url}}">{{profile.title}}</a>
 			{% endfor %}
 		</div>
 
-
 		{%- include cube.html -%}
-
 		{%- include homeNav.html -%}
 
-
-
 	</div>
 
-	<div class="feed" data-page="1" data-totalPages="{{ paginator.total_pages }}">
-		{%- include feed.html -%}
-	</div>
-	<script src="{{ '/assets/js/pagination.js' | relative_url }}"></script>
 
-	<script src="{{ '/assets/js/cubes.js' | relative_url }}"></script>
-	<script src="{{ '/assets/js/home-parallax.js' | relative_url }}"></script>
+	{%- include feed.html -%}
+
+
 </body>
+<script src="{{ '/assets/js/pagination.js' | relative_url }}"></script>
 
+<script src="{{ '/assets/js/cubes.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/home-parallax.js' | relative_url }}"></script>
 </html>

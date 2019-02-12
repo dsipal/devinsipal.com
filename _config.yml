@@ -7,6 +7,9 @@ description: >-
 baseurl: ""
 url: "http://devinsipal.com"
 
+permalink: '/:i_month/:title'
+
+
 # Build settings
 markdown: kramdown
 theme: devinsipal
@@ -20,21 +23,6 @@ sass:
   style: compact
   sass_dir: ./_sass
 
-collections:
-  category:
-    output: true
-    permalink: /:name/
-
-
-defaults:
-  - scope:
-      path: ""
-      type: "category"
-    values:
-      layout: category
-
-permalink: none
-
 pagination:
   enabled: true
   per_page: 3
@@ -42,7 +30,7 @@ pagination:
   limit: 0
   sort_field: 'date'
   sort_reverse: true
-
+  layout: category
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

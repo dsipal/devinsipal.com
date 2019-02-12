@@ -4,8 +4,12 @@
     </div>
 
     <nav class="row bottom-nav">
-        {% for category in site.category %}
-        <h2 class="col-md-4 nav-button hover"><a href="{{category.url}}">{{category.title}}</a></h2>
+        {% for category in site.categories %}
+        <h2 class="col-md-4 nav-button hover">
+			<a href="#" id="{{category[0]}}"  onclick="switchCat(this); return false;">
+				{{category[0]}}
+			</a>
+		</h2>
         {% endfor %}
     </nav>
 </div>

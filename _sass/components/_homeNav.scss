@@ -12,6 +12,10 @@
 	margin-top: 0;
 }
 
+.nav-button > a {
+	padding: 3px;
+}
+
 .navigation {
 	position: absolute;
 	z-index: 3;
@@ -43,11 +47,11 @@
 @media screen and (max-width: 767px) {
 	.name {
 		width: 100%;
+		background-color: white;
 		max-width: 214px;
 	}
 
 	.bottom-nav {
-		max-width: 214px;
 		margin: 0 auto;
 	}
 
