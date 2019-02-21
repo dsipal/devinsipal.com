@@ -1,8 +1,30 @@
+.container-top {
+	background: rgba(112,49,207,1);
+	background: linear-gradient(166deg, rgba(229,206,173,1) 0%, rgba(112,49,207,1) 84%);
+	overflow: hidden;
+	height: 100vh;
+}
+
+.social-top{
+	margin-top: 1vh;
+	margin-left: 4vh;
+	text-align: left;
+}
+
+.social-top > a{
+	font-size: 19px;
+	font-weight: 700;
+	color: white;
+	letter-spacing: .2em;
+	margin-right: 3vw;
+
+}
+
 .svg-background {
 	background-size: contain;
 	background-position: center bottom;
 	background-repeat: no-repeat;
-	height: 85%;
+	height: 90%;
 	box-sizing: border-box;
 }
 
@@ -11,7 +33,7 @@
 	z-index: 3;
 	min-height: 256px;
 	min-width: 256px;
-	top: 20%;
+	top: 25%;
 	height: 70%;
 }
 
@@ -22,15 +44,15 @@
 	width: 33vh;
 	position: absolute;
 	left: 50%;
-	top: 50%;
+	top: 40%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
 
 .parallax-wrapper {
 	display: block;
-	position: relative;
-	top: 10%;
+	position: absolute;
+	bottom: 0;
 	height: 80%;
 	width: 100%;
 }
@@ -43,7 +65,7 @@
 	min-height: 600px;
 	z-index: 1;
 	bottom: 0;
-	background-size: 167vh auto;
+	background-size: 159vh auto;
 }
 
 #left-art {
@@ -77,16 +99,6 @@
 	height: 60%;
 }
 
-.container-top {
-	background: rgb(229,206,173);
-	background: linear-gradient(166deg, rgba(229,206,173,1) 0%, rgba(112,49,207,1) 84%);
-	overflow: hide;
-	height: 100vh;
-}
-
-.sidebar-container {
-	z-index: 3;
-}
 @media screen and (max-width: 1199px) {
 
 
@@ -108,9 +120,6 @@
 		height: 45vh;
 	}
 
-	.sidebar {
-		display: none;
-	}
 
 	#left-small-art {
 		background-position: center top;
@@ -128,7 +137,7 @@
 
 	#white-cover {
 		height: 50%;
-		background-size: 100vh 60vh;
+		background-size: 100%;
 		background-position: center bottom;
 	}
 
@@ -136,20 +145,27 @@
 		height: 100%;
 	}
 
-	@media screen and (max-height: 709px){
+	@media screen and (max-height: 620px){
 		.parallax-wrapper{
 			display: none;
 		}
 		.container-top{
-			height: 120px;
+			height: 90px;
+		}
+		.social-top{
+			display: none;
 		}
 	}
+
+
 }
 @media screen and (max-width: 768px) {
 	.parallax-wrapper{
 		display: none;
 	}
-
+	.social-top{
+		display: none;
+	}
 	.container-top {
 		height: 120px;
 	}

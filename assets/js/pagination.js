@@ -11,11 +11,12 @@ $(document).ready(function() {
     }
 
     $(window).scroll(function() {
-        if ($('body').height() <= $(window).height() ||
-            ($(document).height() - $(window).height() - $(window).scrollTop()) < ($('.feed-item').height() * .75) &&
-            $('.feed').attr('data-page') < $('.feed').attr('data-totalPages')
-        ) {
-            loadMorePosts()
+        if ($('.feed').attr('data-page') < $('.feed').attr('data-totalPages')
+		&& ($('body').height() <= $(window).height() ||
+		($(document).height() - $(window).height() - $(window).scrollTop()) < ($('.feed-item').height() * .75))
+	) {
+            loadMorePosts();
+			console.log('more posts.');
         }
     })
 });

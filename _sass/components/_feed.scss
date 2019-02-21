@@ -3,19 +3,18 @@
 }
 
 .feed {
-	padding: 10vh 10vw;
+	background-color: $background-color;
+	background-image: url('/assets/img/feedbg.svg');
+	background-size: cover;
+	background-position: center;
+	padding: 50px 10vw;
 	position: relative;
 	z-index: 4;
-	background-color: white;
-	background-image: url("/assets/img/feedbg.svg");
-	background-size: contain;
-	background-position: center;
 }
 
 .feed-col {
 	box-sizing: content-box;
 	padding: 0;
-
 }
 
 .feed-item {
@@ -47,32 +46,7 @@
 	font-size: 3em;
 	color: white;
 	font-weight: 600;
-	opacity: .8;
 }
-
-.c-video {
-	background-color: #31f7b6;
-}
-.c-graphics {
-	background-color: #316ff7;
-}
-.c-code {
-	background-color: #f77331;
-}
-
-
-
-@media(hover: hover){
-	.feed-col:hover .item-category{
-		display: inline-block;
-		position: absolute;
-		top: 0;
-	}
-	.feed-item:hover .item-img {
-		border-bottom: 5px solid #31d4f7;
-	}
-}
-
 
 .item-name-date {
 	line-height: 28px;
@@ -92,6 +66,27 @@
 	color: dimgrey;
 	font-size: 10px;
 	padding: 0;
+}
+
+.c-video {
+	background-color: rgba(121, 255, 235, .7);
+}
+.c-graphics {
+	background-color: rgba(175, 88, 182, .7);
+}
+.c-code {
+	background-color: rgba(241, 129, 72, .7);
+}
+
+@media(hover: hover){
+	.feed-item:hover .item-category{
+		display: inline-block;
+		position: absolute;
+		top: 0;
+	}
+	.feed-item:hover .item-img {
+		border-bottom: 5px solid #111;
+	}
 }
 
 @media screen and (max-width: 1199px) {

@@ -5,7 +5,12 @@ type: 'post'
 
 <div class="row main-content">
 	<div class="post shadow">
+		{% if page.category == 'code' %}
+		<img class="row post-img-small" src="{{page.featured-img}}" alt="{{page.title}}">
+		{% else %}
 		<img class="row post-img" src="{{page.featured-img}}" alt="{{page.title}}">
+		{% endif %}
+
 
 		<div class="row post-details">
 			<div class="row post-name-date">

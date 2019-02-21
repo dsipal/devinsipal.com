@@ -1,25 +1,4 @@
-@import "../layout";
+@import "../devinsipal";
 @import "../components/landing";
 @import "../components/homeNav";
 @import "../components/feed";
-
-.social-top{
-	margin-top: 1vh;
-	margin-left: 4vh;
-	text-align: left;
-}
-
-.social-top > a{
-	font-size: 19px;
-	font-weight: 700;
-	color: white;
-	letter-spacing: .2em;
-	margin-right: 3vw;
-
-}
-
-@media screen and (max-width: 768px) {
-	.social-top{
-		display: none;
-	}
-}
