@@ -12,19 +12,17 @@
 	background-position: center;
 }
 
-.feed-row {
-	margin-bottom: 3vh;
-}
-
 .feed-col {
 	box-sizing: content-box;
 	padding: 0;
+
 }
 
 .feed-item {
 	overflow: hidden;
 	height: 85%;
 	background-color: white;
+	margin-bottom: 3vh;
 	margin-right: 3vh;
 }
 
@@ -63,16 +61,18 @@
 }
 
 
-.feed-item:hover .item-img {
-	border-bottom: 5px solid #31d4f7;
+
+@media(hover: hover){
+	.feed-col:hover .item-category{
+		display: inline-block;
+		position: absolute;
+		top: 0;
+	}
+	.feed-item:hover .item-img {
+		border-bottom: 5px solid #31d4f7;
+	}
 }
 
-.feed-col:hover .item-category{
-	display: inline-block;
-	position: absolute;
-	top: 0;
-
-}
 
 .item-name-date {
 	line-height: 28px;

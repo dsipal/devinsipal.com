@@ -14,11 +14,13 @@
   text-align: center;
   font-weight: 600;
 }
-
-.hover > a:hover {
-  background-color: #000000;
-  color: #fff;
+@media(hover: hover){
+	.hover > a:hover {
+	  background-color: #000000;
+	  color: #fff;
+	}
 }
+
 
 .active:focus{
 	color: #fff;

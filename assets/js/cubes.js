@@ -1,5 +1,5 @@
 //global variables
-var cubesAmt = 4;
+var cubesAmt = 3;
 var cubes = [];
 var changed = [];
 
@@ -20,7 +20,7 @@ renderer.setClearColor( 0x000000, 0 );
 
 
 function onWindowResize(){
-    const width = $(container).width()/2.4;
+    const width = $(container).height();
     const height = $(container).height();
 
     if (canvas.width !== width || canvas.height !== width) {

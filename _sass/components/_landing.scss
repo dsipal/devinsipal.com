@@ -18,8 +18,8 @@
 .animation {
 	max-width: 400px;
 	max-height: 400px;
-	height: 20vw;
-	width: 20vw;
+	height: 33vh;
+	width: 33vh;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -29,8 +29,8 @@
 
 .parallax-wrapper {
 	display: block;
-	position: absolute;
-	bottom: 0;
+	position: relative;
+	top: 10%;
 	height: 80%;
 	width: 100%;
 }
@@ -43,7 +43,7 @@
 	min-height: 600px;
 	z-index: 1;
 	bottom: 0;
-	background-size: contain;
+	background-size: 167vh auto;
 }
 
 #left-art {
@@ -88,16 +88,20 @@
 	z-index: 3;
 }
 @media screen and (max-width: 1199px) {
+
+
 	.container-top {
 		position: relative;
 	}
 
 	.animation {
 		max-height: 256px;
+		height: 20vh;
+		width: 20vh;
 	}
 	.animation-container{
 		height: 50%;
-		top: 10%;
+		top: -10%;
 	}
 
 	.container-top {
@@ -124,19 +128,25 @@
 
 	#white-cover {
 		height: 50%;
-		background-size: contain;
+		background-size: 100vh 60vh;
+		background-position: center bottom;
 	}
 
 	.parallax-wrapper {
 		height: 100%;
 	}
+
+	@media screen and (max-height: 709px){
+		.parallax-wrapper{
+			display: none;
+		}
+		.container-top{
+			height: 120px;
+		}
+	}
 }
 @media screen and (max-width: 768px) {
-	.animation {
-		display: none;
-	}
-
-	.svg-background {
+	.parallax-wrapper{
 		display: none;
 	}
 
