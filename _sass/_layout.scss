@@ -1,32 +1,32 @@
 @import "base";
 
 .nav-button {
-  display: inline-block;
-  color: #55d727;
-  margin: 0;
-  text-align: center;
-  font-weight: 600;
+	display: inline-block;
+	color: #55d727;
+	margin: 0;
+	text-align: center;
+	font-weight: 600;
 }
-@media(hover: hover){
+@media(hover: hover) {
 	.hover > a:hover {
-	  background-color: #000000;
-	  color: #fff;
+		background-color: #000000;
+		color: #fff;
 	}
 }
 
-
-.active:focus{
+.active:focus {
 	color: #fff;
 }
 
-.active{
-  color: $active-page-color;
-  background-color: $active-page-bgcolor;
+.active {
+	color: $active-page-color;
+	background-color: $active-page-bgcolor;
 }
 
 .shadow {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
+
 .rounded {
 	border-radius: 7px;
 }

@@ -1,3 +1,7 @@
+---
+type: 'home'
+---
+
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
@@ -9,6 +13,7 @@
 			{% for profile in site.data.social %}
 			<a href="{{profile.url}}">{{profile.title}}</a>
 			{% endfor %}
+			<a href="/about/" class="about">about</a>
 		</div>
 
 		{%- include cube.html -%}
@@ -27,4 +32,5 @@
 
 <script src="{{ '/assets/js/cubes.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/home-parallax.js' | relative_url }}"></script>
+
 </html>

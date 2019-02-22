@@ -19,15 +19,14 @@
 }
 
 .navigation {
+	display: inline-block;
 	position: absolute;
-	z-index: 3;
-	box-sizing: border-box;
 	bottom: 0;
 	left: 0;
-	border-bottom: 3px solid black;
-	margin-top: 10px;
+	z-index: 3;
 	width: 100%;
-	display: inline-block;
+	box-sizing: border-box;
+	margin-top: 10px;
 	justify-content: center;
 }
 

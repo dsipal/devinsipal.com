@@ -1,20 +1,16 @@
-<header class="row">
-	<div class= "row navigation shadow">
+<header class="row shadow navigation">
+	<nav class="row">
+		<h2 class="col-sm-3 nav-button hover" id="home"><a href="/">home</a></h2>
 
-		<nav class="row">
-			<h2 class="col-sm-3 nav-button hover" id="home"><a href="/">home</a></h2>
+		{% for category in site.categories %}
 
-			{% for category in site.categories %}
-
-			<h2 class="col-sm-3 nav-button ">
-				{% if page.category == category[0] %}
-				<a class="active" href="/?cat={{category[0]}}">{{category[0]}}</a>
-				{% else %}
-				<a href="/?cat={{category[0]}}">{{category[0]}}</a>
-				{% endif %}
-			</h2>
-			{% endfor %}
-
-		</nav>
-	</div>
+		<h2 class="col-sm-3 nav-button ">
+			{% if page.category == category[0] %}
+			<a class="active" href="/?cat={{category[0]}}">{{category[0]}}</a>
+			{% else %}
+			<a href="/?cat={{category[0]}}">{{category[0]}}</a>
+			{% endif %}
+		</h2>
+		{% endfor %}
+	</nav>
 </header>
