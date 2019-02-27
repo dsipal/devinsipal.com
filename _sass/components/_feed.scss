@@ -4,7 +4,7 @@
 
 .feed {
 	background-color: $background-color;
-	background-image: url('/assets/img/layout/feedbg.svg');
+	background-image: $primary-svg-bg;
 	background-size: cover;
 	background-position: center;
 	padding: 50px 10vw;
@@ -34,7 +34,7 @@
 	object-position: 50% 50%;
 	height: 256px;
 	width: 100%;
-	border-bottom: 5px solid #f79c31;
+	border-bottom: $feed-item-border;
 }
 
 .item-category{
@@ -69,13 +69,13 @@
 }
 
 .c-video {
-	background-color: rgba(121, 255, 235, .7);
+	background-color: $code-hover-color;
 }
 .c-graphics {
-	background-color: rgba(175, 88, 182, .7);
+	background-color: $graphics-hover-color;
 }
 .c-code {
-	background-color: rgba(241, 129, 72, .7);
+	background-color: $code-hover-color;
 }
 
 @media(hover: hover){

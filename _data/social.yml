@@ -1,5 +1,7 @@
 -   title: github
     url: https://github.com/dsipal
+    img: '/assets/img/layout/github.svg'
 
 -   title: linkedin
     url: https://linkedin.com/in/devin-sipal-721285106
+    img: '/assets/img/layout/linkedin.svg'

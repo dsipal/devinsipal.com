@@ -3,11 +3,10 @@
 source "https://rubygems.org"
 gemspec
 
-gem 'jekyll-feed'
-gem 'wdm' if Gem.win_platform?
-gem 'bootstrap-sass'
-gem 'jekyll-bootstrap-sass'
-gem 'html-proofer'
-gem 'rake'
-gem 'rsync'
-gem 'jekyll-paginate-v2'
+gem 'jekyll'
+group :jekyll_plugins do
+	gem 'jekyll-feed'
+	gem 'wdm' if Gem.win_platform?
+	gem 'jekyll-bootstrap-sass'
+	gem 'jekyll-paginate-v2'
+end

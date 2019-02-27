@@ -5,11 +5,11 @@ var changed = [];
 
 
 //threejs variables
-const container = '.animation-container';
+const container = '.animation';
 const scene = new THREE.Scene();
 const renderer = new THREE.WebGLRenderer({antialias:true, alpha: true, canvas: document.querySelector("div > canvas.animation")});
 const canvas = renderer.domElement;
-renderer.setSize( $(container).width()/2.4, $(container).width()/2.4, false);
+renderer.setSize( $(container).width(), $(container).width(), false);
 const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
 camera.position.z = 2.3;
 
@@ -20,7 +20,7 @@ renderer.setClearColor( 0x000000, 0 );
 
 
 function onWindowResize(){
-    const width = $(container).height();
+    const width = $(container).width();
     const height = $(container).height();
 
     if (canvas.width !== width || canvas.height !== width) {

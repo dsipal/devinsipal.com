@@ -11,26 +11,20 @@ type: 'home'
 	<div class="row container-top">
 		<div class="row social-top">
 			{% for profile in site.data.social %}
-			<a href="{{profile.url}}">{{profile.title}}</a>
+			<a href="{{profile.url}}"><img src="{{profile.img}}" class="social-img shadow"/></a>
 			{% endfor %}
-			<a href="/about/" class="about">about</a>
 		</div>
 
 		{%- include cube.html -%}
-		{%- include homeNav.html -%}
+		{%- include nav.html -%}
 
 	</div>
 	{%- include feed.html -%}
 
-	<footer>
-		<span>Site design created by Devin Sipal, built using <a href="https://jekyllrb.com/">Jekyll</a>.</span>
-		<span><a href="mailto:devin@devinsipal.com">Contact me</a></span>
-	</footer>
+	{%- include footer.html -%}
 
 </body>
 <script src="{{ '/assets/js/pagination.js' | relative_url }}"></script>
-
 <script src="{{ '/assets/js/cubes.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/home-parallax.js' | relative_url }}"></script>
-
 </html>

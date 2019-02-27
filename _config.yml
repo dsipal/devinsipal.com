@@ -2,27 +2,20 @@ title: devinsipal.com
 email: devin@devinsipal.com
 
 description: >-
-  Devin Sipal has a wide variety of styles they tap into. Utilizing both video and code as a medium, they bring a fresh take to both areas. Having started programming at a very young age, they have an intense passion for working with computers to create art.
-
+    I am a digital artist utilizing video, audio, photo, and code. From a young age I was always fascinated by computers; with the gift of a Visual Basic game programming book around age 8 I was plunged into a world of creating multimedia experiences. For me, the line between analytical and creative thinking is blurred- I prefer to operate in between the two.
 baseurl: ""
 url: "http://devinsipal.com"
-
 permalink: '/:categories/:title/'
-
-
 # Build settings
 markdown: kramdown
 theme: devinsipal
 plugins:
   - jekyll-feed
-  - bootstrap-sass
   - jekyll-bootstrap-sass
   - jekyll-paginate-v2
-
 sass:
   style: compact
   sass_dir: ./_sass
-
 pagination:
   enabled: true
   per_page: 6

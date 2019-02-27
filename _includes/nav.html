@@ -1,0 +1,19 @@
+<div class="row shadow navigation">
+	{% if layout.type=='home'%}
+	<div class="row name">
+        <h1>devin sipal</h1>
+    </div>
+	{% endif %}
+
+	<nav class="row {%if layout.type=='home'%}bottom-nav{%endif%}">
+		{% if layout.type=='home'%}
+		<h2 class="col-xs-3 nav-button hover" id="about"><a href="/about/">about</a></h2>
+		{% else %}
+		<h2 class="col-xs-3 nav-button hover" id="home"><a href="/">home</a></h2>
+		{% endif %}
+
+		<h2 class="col-xs-3 nav-button hover" id="video"><a href="/?cat=video">video</a></h2>
+		<h2 class="col-xs-3 nav-button hover" id="code"><a href="/?cat=code">code</a></h2>
+		<h2 class="col-xs-3 nav-button hover" id="graphics"><a href="/?cat=graphics">gfx</a></h2>
+	</nav>
+</div>

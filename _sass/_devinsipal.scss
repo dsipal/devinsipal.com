@@ -1,4 +1,42 @@
-$link-color: #0cc619;
+$primary-font: 'Source Code Pro', monospace;
+$primary-svg-bg: url('/assets/img/layout/feedbg.svg');
+
 $background-color: #fff;
 $active-page-color: #fff;
 $active-page-bgcolor: #000;
+
+$link-color: #0cc619;
+$hover-bg-color: #000;
+$hover-font-color: #fff;
+
+$landing-primary-color: #7031cf;
+$landing-secondary-color: #54219d;
+$landing-accent-color: #eec49c;
+$landing-gradient: linear-gradient(166deg, $landing-accent-color 0%,  $landing-primary-color 60%, $landing-secondary-color 90%);
+$landing-social-color: white;
+$footer-gradient: linear-gradient(166deg, $landing-secondary-color 0%, $landing-primary-color 25%, $landing-accent-color 70%);
+
+$homeNav-bgcolor: white;
+$homeNav-border: 2px solid black;
+$homeNav-name-color: #000;
+$homeNav-name-border: 2px #000 solid;
+$homeNav-name-bgcolor: white;
+
+$post-bgcolor: white;
+$post-date-color:  #b2b2b2;
+$post-name-date-bgcolor: #000;
+$post-name-date-color: #fff;
+$post-content-bgcolor: #fff;
+$post-content-color: #000;
+
+$feed-item-border: 5px solid #f79c31;
+$video-hover-color: rgba(121, 255, 235, .7);
+$graphics-hover-color: rgba(175, 88, 182, .7);
+$code-hover-color: rgba(241, 129, 72, .7);
+
+$about-bgcolor: #adc2e6;
+$about-text-bgcolor: white;
+$about-text-border: 4px solid #1f9aba;
+$about-portrait-border: 4px solid #e29147;
+$about-footer-bgcolor: white;
+$about-footer-color: black;

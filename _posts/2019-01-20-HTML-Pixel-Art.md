@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-code
 title: "HTML Pixel Art"
 category: code
 featured-img: '/assets/img/featured/subtractive.png'

@@ -1,30 +1,30 @@
 .container-top {
-	background: rgba(112,49,207,1);
-	background: linear-gradient(166deg, rgba(229,206,173,1) 0%, rgba(112,49,207,1) 84%);
+	background: $landing-primary-color;
+	background: $landing-gradient;
 	overflow: hidden;
 	height: 100vh;
+	position: relative;
 }
 
 .social-top{
-	text-align: left;
+	margin: 10px 0px 5px 0px;
 }
-
-.about {
-	float: right;
-}
-
 .social-top > a{
 	font-size: 19px;
 	font-weight: 700;
-	color: white;
+	color: $landing-social-color;
 	letter-spacing: .2em;
 	margin: 0 1em 0 1em;
-	padding: 3px;
+	padding: 5px;
 }
 
-.social-top > a:hover{
+.social-top > img:hover{
 	text-decoration: none;
 	background-color: rgba(0, 0, 0, 0.3);
+}
+.social-img {
+	border-radius: 5px;
+	height: 36px;
 }
 
 .svg-background {
@@ -99,66 +99,15 @@
 	height: 60%;
 }
 
-@media screen and (max-width: 1199px) {
-	.container-top {
-		position: relative;
-		height: 45vh;
-	}
 
-	.animation-container{
-		height: 50%;
-	}
-
-	.animation {
-		max-height: 256px;
-		height: 20vh;
-		width: 20vh;
-	}
-
-	#left-small-art {
-		background-position: center top;
-		bottom: 50%;
-		right: 3%;
-	}
-
-	#left-art {
-		height: 40vh;
-		top: 15%;
-	}
-	#right-art{
-		height: 30vh;
-	}
-
-	#white-cover {
-		height: 50%;
-		background-size: 100vh;
-		background-position: center bottom;
-	}
-
-	.parallax-wrapper {
-		height: 100%;
-	}
-
-	@media screen and (max-height: 620px){
-		.parallax-wrapper{
-			display: none;
-		}
-		.container-top{
-			height: 90px;
-		}
-		.social-top{
-			display: none;
-		}
-	}
-}
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
 	.parallax-wrapper{
 		display: none;
 	}
-	.social-top{
-		display: none;
+	.animation-container{
+		display: block;
 	}
 	.container-top {
-		height: 120px;
+		height: 150px;
 	}
 }

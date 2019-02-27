@@ -1,14 +1,14 @@
 body {
 	background-color: $background-color;
-	background-image: url('/assets/img/layout/feedbg.svg');
+	background-image: $primary-svg-bg;
 	background-size: cover;
 	background-position: center;
 }
 .main-content {
-	padding-left: 7vh;
-	padding-right: 7vh;
+	padding-left: 5vh;
+	padding-right: 5vh;
 	overflow: hidden;
-	height: 100%;
+	min-height: 91.5vh;
 }
 
 .post {
@@ -17,8 +17,8 @@ body {
 	display: inline-block;
 	border-radius: 15px;
 	overflow: hidden;
-	background-color: white;
-	max-width: 75%;
+	background-color: $post-bgcolor;
+	max-width: 60%;
 }
 
 .post-info {
@@ -41,7 +41,7 @@ video {
 
 .post-img-small {
 	width: 100%;
-	height: 40vh;
+	height: 60%;
 	object-fit: cover;
 	object-position: center;
 }
@@ -55,7 +55,7 @@ video {
 .post-date {
 	margin-top: auto;
 	text-align: right;
-	color: #b2b2b2;
+	color: $post-date-color;
 	font-size: 10px;
 	padding: 0;
 }
@@ -63,19 +63,27 @@ video {
 .post-name-date {
 	vertical-align: bottom;
 	line-height: 28px;
-	background-color: #000;
+	background-color: $post-name-date-bgcolor;
 	width: 100%;
-	color: #fff;
+	color: $post-name-date-color;
 	min-height: 5vh;
 	padding: 10px;
 }
 
 .post-content {
-	background-color: #fff;
+	background-color: $post-content-bgcolor;
+	color: $post-content-color;
 	text-align: left;
 	padding: 15px;
+	font-size: 16px;
 }
 @media screen and (max-width: 1199px) {
+	.main-content{
+		padding: 2vh 2vh;
+	}
+	.post{
+		max-width: 90%;
+	}
 	.post-name-date {
 		justify-content: center;
 		max-width: none;
@@ -99,10 +107,6 @@ video {
 @media screen and (max-width: 768px) {
 	.post-excerpt {
 		display: none;
-	}
-
-	.main-content {
-		min-height: 0;
 	}
 
 	.post {

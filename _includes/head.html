@@ -12,20 +12,27 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-	<link rel="stylesheet" href="{{ '/assets/css/layout.css' | relative_url }}" />
+	<link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}" />
 
-	{%if page.title == 'home' %}
+	{%if layout.type == 'home' or 'about' %}
+	<meta property = 'og:title' content='Devin Sipal'/>
+	<meta property='og:image' content ='{{site.url}}/assets/img/me.png' />
+	<meta property='og:description' content='{{site.description}}' />
+	<meta property='og:url' content='{{site.url}}' />
+	{% endif %}
+	{%if layout.type == 'home'%}
 	<link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.2/rellax.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/91/three.min.js"></script>
 	{% endif %}
-	{%if page.type == 'category' %}
-	<link rel="stylesheet" href="{{ '/assets/css/category.css' | relative_url }}">
+	{% if layout.type == 'about' %}
+	<link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
 	{% endif %}
 	{% if layout.type == 'post' %}
 	<link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
-	{% endif %}
-	{% if layout.type == 'about' %}
-	<link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
+	<meta property = 'og:title' content='{{page.title}}'/>
+	<meta property='og:image' content ='{{page.featured-img}}' />
+	<meta property='og:description' content='{{page.excerpt | strip_html}}' />
+	<meta property='og:url' content='{{site.url}}{{page.url}}' />
 	{% endif %}
 </head>
