@@ -1,19 +1,22 @@
-<div class="row shadow navigation">
+<div class="row {%if layout.type=='post'%}shadow{%endif%} navigation">
 	{% if layout.type=='home'%}
-	<div class="row name">
+	<div class="row shadow name">
         <h1>devin sipal</h1>
     </div>
 	{% endif %}
 
-	<nav class="row {%if layout.type=='home'%}bottom-nav{%endif%}">
+	<nav class="row {%if layout.type=='home'%}bottom-nav shadow{%endif%}">
 		{% if layout.type=='home'%}
 		<h2 class="col-xs-3 nav-button hover" id="about"><a href="/about/">about</a></h2>
 		{% else %}
 		<h2 class="col-xs-3 nav-button hover" id="home"><a href="/">home</a></h2>
 		{% endif %}
 
-		<h2 class="col-xs-3 nav-button hover" id="video"><a href="/?cat=video">video</a></h2>
-		<h2 class="col-xs-3 nav-button hover" id="code"><a href="/?cat=code">code</a></h2>
-		<h2 class="col-xs-3 nav-button hover" id="graphics"><a href="/?cat=graphics">gfx</a></h2>
+		<h2 class="col-xs-3 nav-button hover" >
+			<a href="{%if page.title=='home'%}#{%else%}/?cat=video{%endif%}" id="video" {%if page.title=='home'%}onclick="switchCat(this); return false;"{%endif%}>video</a></h2>
+		<h2 class="col-xs-3 nav-button hover" >
+			<a href="{%if page.title=='home'%}#{%else%}/?cat=code{%endif%}" id="code" {%if page.title=='home'%}onclick="switchCat(this); return false;"{%endif%}>code</a></h2>
+		<h2 class="col-xs-3 nav-button hover" >
+			<a href="{%if page.title=='home'%}#{%else%}/?cat=graphics{%endif%}" id="graphics" {%if page.title=='home'%}onclick="switchCat(this); return false;"{%endif%}>gfx</a></h2>
 	</nav>
 </div>
