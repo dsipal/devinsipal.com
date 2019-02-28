@@ -4,7 +4,24 @@ type: 'post'
 ---
 <div class="row main-content">
 	<div class="post shadow">
-		<img class="row post-img" src="{{page.full-img}}" alt="{{page.title}}">
+
+		{%if page.images.size > 1%}
+		<div class="row gallery" data-image="1" data-images="{{page.images.size}}">
+			{%for image in page.images%}
+			<img class="post-img gallery-img" id="img-{{forloop.index}}" src="{{image.image}}" alt="{{page.title}}">
+			{%endfor%}
+		</div>
+		<div class="row gallery-controls">
+			<div class="col-xs-6 gallery-button" id="prev">
+				Previous
+			</div>
+			<div class="col-xs-6 gallery-button" id="next">
+				Next
+			</div>
+		</div>
+		{%else%}
+		<img class="post-img" src="{{page.full-img}}" alt="{{page.title}}">
+		{%endif%}
 
 		<div class="row post-details">
 			<div class="row post-name-date">
@@ -19,4 +36,5 @@ type: 'post'
 		</div>
 		{% endif %}
 	</div>
+	<script src="/assets/js/gallery.js"></script>
 </div>
