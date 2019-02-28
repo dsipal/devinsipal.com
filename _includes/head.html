@@ -14,25 +14,44 @@
 
 	<link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}" />
 
-	{%if layout.type == 'home' or 'about' %}
-	<meta property = 'og:title' content='Devin Sipal'/>
-	<meta property='og:image' content ='{{site.url}}/assets/img/me.png' />
-	<meta property='og:description' content='{{site.description}}' />
-	<meta property='og:url' content='{{site.url}}' />
+	{% if layout.type == 'home' or layout.type == 'about' %}
+		<meta property='og:title' content='Devin Sipal'/>
+		<meta property='og:type' content='website'/>
+		<meta property='og:image' content ='{{site.url}}/assets/img/me.png' />
+		<meta property='og:image:width' content ='960' />
+		<meta property='og:image:height' content ='960' />
+		<meta property='og:description' content='{{site.description}}' />
+		<meta property='og:url' content='{{site.url}}' />
 	{% endif %}
-	{%if layout.type == 'home'%}
-	<link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.2/rellax.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/91/three.min.js"></script>
+
+	{% if layout.type == 'home' %}
+		<link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.2/rellax.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/91/three.min.js"></script>
 	{% endif %}
+
 	{% if layout.type == 'about' %}
-	<link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
+		<link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
 	{% endif %}
+
 	{% if layout.type == 'post' %}
-	<link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
-	<meta property = 'og:title' content='{{page.title}}'/>
-	<meta property='og:image' content ='{{page.featured-img}}' />
-	<meta property='og:description' content='{{page.excerpt | strip_html}}' />
-	<meta property='og:url' content='{{site.url}}{{page.url}}' />
+		<link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
+		<meta property='og:title' content='{{page.title}}'/>
+		{% if post.category == video %}
+			<meta property='og:type' content='video.other'/>
+			{% else %}
+			<meta property='og:type' content='article'/>
+		{% endif %}
+		<meta property='og:image' content ='{{site.url}}{{page.featured-img}}'/>
+		<meta property='og:image:width' content='500' />
+		<meta property='og:image:height' content='500' />
+		<meta property='og:image:alt' content='{{page.title}}' />
+		{% if page.content.size > 1 %}
+			<meta property='og:description' content='{{page.excerpt | strip_html | truncatewords:25 }}' />
+			{% else %}
+			<meta property='og:description' content='{{site.description | strip_html | truncatewords:25 }}' />
+		{% endif %}
 	{% endif %}
+	<meta property='og:url' content='{{site.url}}{{page.url}}' />
+
 </head>

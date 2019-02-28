@@ -4,6 +4,9 @@
 body {
 	background: $about-bgcolor;
 }
+.navigation{
+	margin-bottom: -5px;
+}
 
 footer {
 	background: $about-footer-bgcolor;
@@ -12,6 +15,7 @@ footer {
 
 .main-content {
 	padding: 5vh 10vh;
+	background: $about-bg;
 }
 
 .self-portrait {
@@ -34,4 +38,10 @@ footer {
 
 p:nth-last-child(n+2) {
 	margin-bottom: 1em;
+}
+
+.document{
+	display: block;
+	padding: 5px;
+	font-size: 16px;
 }

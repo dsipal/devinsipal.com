@@ -4,7 +4,7 @@ email: devin@devinsipal.com
 description: >-
     I am a digital artist utilizing video, audio, photo, and code. From a young age I was always fascinated by computers; with the gift of a Visual Basic game programming book around age 8 I was plunged into a world of creating multimedia experiences. For me, the line between analytical and creative thinking is blurred- I prefer to operate in between the two.
 baseurl: ""
-url: "http://devinsipal.com"
+url: "https://devinsipal.com"
 permalink: '/:categories/:title/'
 # Build settings
 markdown: kramdown
