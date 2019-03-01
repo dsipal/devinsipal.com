@@ -1,8 +1,7 @@
 .container-top {
 	background: $landing-primary-color;
 	background: $landing-gradient;
-	overflow: hidden;
-	height: 100vh;
+	min-height: 50vw;
 	position: relative;
 }
 
@@ -31,30 +30,27 @@
 	background-size: contain;
 	background-position: center bottom;
 	background-repeat: no-repeat;
-	height: 90%;
 	box-sizing: border-box;
 }
 
 .animation-container {
 	position: relative;
 	z-index: 3;
-	min-height: 256px;
-	min-width: 256px;
-	top: 25%;
-	height: 70%;
+	top: 30%;
 }
 
 .animation {
-	height: 33vh;
-	width: 33vh;
+	height: 70%;
+	width: 70%;
 }
 
 .parallax-wrapper {
-	display: block;
 	position: absolute;
+	display: block;
 	bottom: 0;
-	height: 80%;
+	height: 50vw;
 	width: 100%;
+	overflow: hidden;
 }
 
 #white-cover {
@@ -62,10 +58,8 @@
 	height: 80%;
 	width: 100%;
 	position: absolute;
-	min-height: 600px;
 	z-index: 1;
 	bottom: 0;
-	background-size: 159vh auto;
 }
 
 #left-art {
@@ -73,13 +67,15 @@
 	position: relative;
 	z-index: 2;
 	background-position: center;
-	height: 75vh;
+	height: 70%;
+	top: 20%;
 }
 
 #left-small-art {
 	background-image: url("/assets/img/layout/small-home-form.svg");
 	position: relative;
-	height: 20vh;
+	height: 25%;
+	top: 15%;
 	z-index: 1;
 	background-position: center;
 	background-size: contain;
@@ -89,6 +85,8 @@
 	background-image: url("/assets/img/layout/smaller-home-form.svg");
 	position: relative;
 	z-index: 2;
+	height: 30%;
+	top: 50%;
 }
 
 #right-art {
@@ -96,18 +94,19 @@
 	z-index: 0;
 	position: relative;
 	background-position: center;
-	height: 60%;
+	height: 50%;
+	top: 5%;
 }
 
 
-@media screen and (max-width: 999px) {
-	.parallax-wrapper{
-		display: none;
-	}
-	.animation-container{
-		display: block;
-	}
-	.container-top {
-		height: 150px;
-	}
-}
+// @media screen and (max-width: 999px) {
+// 	.parallax-wrapper{
+// 		display: none;
+// 	}
+// 	.animation-container{
+// 		display: block;
+// 	}
+// 	.container-top {
+// 		height: 150px;
+// 	}
+// }

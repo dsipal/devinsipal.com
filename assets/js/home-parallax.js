@@ -8,26 +8,26 @@ var left = new Rellax('#left-art', {
 });
 
 var leftSmall = new Rellax('#left-small-art', {
-	speed: -6,
-	center: true,
+	speed: -4,
+	center: false,
 	wrapper: null,
 	round: true,
 	vertical: true,
-	horizontal: false
+	horizontal: false,
 });
 
 var right = new Rellax('#right-art', {
-	speed: -8,
+	speed: -6,
     center: false,
     wrapper: null,
     round: true,
     vertical: true,
-    horizontal: true
+    horizontal: false
 });
 
 var rightSmall = new Rellax('#right-small-art', {
 	speed: 7,
-	center: true,
+	center: false,
 	wrapper: null,
 	round: true,
 	vertical: true,
