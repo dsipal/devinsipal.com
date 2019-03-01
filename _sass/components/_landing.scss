@@ -1,7 +1,9 @@
 .container-top {
 	background: $landing-primary-color;
 	background: $landing-gradient;
-	min-height: 50vw;
+	height: 51vw;
+	max-height: 100vh;
+	max-width: 100vw;
 	position: relative;
 }
 
