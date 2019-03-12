@@ -1,0 +1,25 @@
+---
+layout: twocol
+type: 'post'
+---
+
+<div class="col-lg-10 main-content">
+	<div class="row">
+		<div class="col-md-5 post-image">
+			<img class="post-img shadow" style="width: 100%" src="{{page.featured-img}}" alt="{{page.title}}">
+		</div>
+
+		<div class="col-md-7 post-details">
+			<div class="row post-name-date">
+				<h2 class="col-lg-9 post-name">{{page.title}}</h2>
+				<time class="col-sm-3 post-date">{{page.date | date_to_long_string}}</time>
+			</div>
+
+
+			<div class="post-content">
+				{{ content }}
+			</div>
+		</div>
+	</div>
+
+</div>

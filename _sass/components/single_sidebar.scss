@@ -1,0 +1,26 @@
+.sidebar {
+  justify-content: center;
+  font-size: 100%;
+  height: 40vh;
+  overflow: hidden;
+  margin-top: 2vh;
+}
+
+.recent-bar > h2 {
+  font-size: 24px;
+  border-bottom: 1px solid black;
+}
+
+.item {
+  text-align: center;
+}
+
+.sidebar-header {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1199px) {
+  .sidebar {
+    display: none;
+  }
+}

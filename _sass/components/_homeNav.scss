@@ -32,7 +32,8 @@
 
 .bottom-nav {
 	background-color: $homeNav-bgcolor;
-	border: $homeNav-border;
+	border-top: $homeNav-border;
+	border-bottom: $homeNav-border;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }

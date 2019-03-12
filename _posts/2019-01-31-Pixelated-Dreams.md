@@ -1,9 +1,0 @@
----
-layout: post-graphics
-title: "Pixelated Dreams"
-category: graphics
-featured-img: '/assets/img/featured/pixelated.png'
-full-img: '/assets/img/graphics/pixelated.png'
----
-
-In the era of the internet where does our real self exist? Is an online persona an extension of ones self or simply a construction that does not truly represent the person behind the keyboard?

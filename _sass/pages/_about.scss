@@ -16,6 +16,9 @@ footer {
 .main-content {
 	padding: 5vh 10vh;
 	background: $about-bg;
+	background: $about-bg-img;
+	background-repeat: repeat;
+	background-size: 33vw 50vh;
 }
 
 .self-portrait {
@@ -44,4 +47,16 @@ p:nth-last-child(n+2) {
 	display: block;
 	padding: 5px;
 	font-size: 16px;
+}
+
+@media screen and (max-width: 768px){
+	.main-content{
+		padding: 10px;
+		background-size: 50% 33%;
+		background-position: top;
+	}
+	.about-text{
+		text-indent: 0;
+	}
+
 }

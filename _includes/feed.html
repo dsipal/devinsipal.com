@@ -2,7 +2,7 @@
 <div class="feed" data-page="1" data-totalPages="{{paginator.total_pages}}" data-url="{{page.paginator-path}}">
 	<div class="row feed-row">
 		{% for item in paginator.posts %}
-		<div class="col-md-4 feed-col">
+		<div class="col-sm-6 feed-col">
 			<div class="feed-item force-height shadow rounded">
 				{% if item.featured-img %}
 				<div class="row item-top">
